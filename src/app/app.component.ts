@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Section } from './Section';
+import { SECTIONS } from './mock-sections';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-online-porfolio';
+  title = 'app';
+  sections = SECTIONS;
+  display = false;
+  toggle(): void {
+    this.display = !this.display;
+  }
 }

@@ -1,0 +1,93 @@
+$background_color_1: #6b6868;
+$background_color_2: white;
+
+p {
+	margin: 0;
+}
+.container-fluid {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	padding: 10px;
+	background-image: url('/assets/img/skillset.png');
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.divider {
+	&::before {
+		content: '';
+		top: 8px;
+		left: 0;
+		right: 19px;
+		display: inline-block;
+		width: 40%;
+		height: 1px;
+		background-color: $background_color_1;
+	}
+	&::after {
+		content: '';
+		top: 8px;
+		left: 0;
+		right: 19px;
+		display: inline-block;
+		width: 40%;
+		height: 1px;
+		background-color: $background_color_1;
+	}
+}
+.experience {
+	padding-left: 0;
+}
+.card {
+	width: 48%;
+	background-color: $background_color_2;
+	border-radius: 10px;
+	padding: 5px 15px;
+	margin: 10px 0;
+	list-style: none;
+	position: relative;
+	&:nth-child(odd) {
+		left: 0;
+	}
+	&:nth-child(even) {
+		left: 52%;
+	}
+}
+@media only screen and (min-width: 769px) {
+	.timeline {
+		&::after {
+			content: '';
+			position: absolute;
+			width: 6px;
+			background-color: $background_color_2;
+			top: 10px;
+			bottom: 0;
+			left: 50%;
+		}
+	}
+}
+@media screen and (max-width:768px) {
+	.timeline {
+		&::after {
+			content: '';
+		}
+	}
+	.card {
+		width: 98%;
+		background-color: $background_color_2;
+		border-radius: 10px;
+		padding: 5px 7px;
+		margin-right: auto;
+		margin-left: auto;
+		list-style: none;
+		position: relative;
+		&:nth-child(odd) {
+			left: 0;
+		}
+		&:nth-child(even) {
+			left: 0;
+		}
+	}
+}
